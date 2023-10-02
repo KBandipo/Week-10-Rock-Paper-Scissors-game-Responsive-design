@@ -155,3 +155,65 @@ body {
   right: 5%;
 }
 /* *************************************************************** */
+
+/* Element Syling */
+
+.game-heading {
+  /* text-align: center; */
+  font-size: 3rem;
+  grid-column: 1/-1;
+}
+.player-title {
+  font-size: 3rem;
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.player-score {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+.request-choice {
+  font-size: 1.3rem;
+  margin-bottom: 1rem;
+}
+.player-message {
+  font-size: 1.5rem;
+  margin: 1rem 0;
+  display: none;
+}
+.comp-score {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+.compChoice {
+  font-size: 1.5rem;
+  margin: 1rem 0;
+}
+.compMessage {
+  font-size: 1.5rem;
+  margin: 1rem 0;
+  /* display: none; */
+}
+.round {
+}
+
+.winner-count {
+  text-align: center;
+}
+.round-count {
+  text-align: center;
+}
+.result {
+  /* background-color: pink; */
+}
+
+/*order matters in css*/
+
+.block {
+  display: block;
+}
+
+.hide {
+  display: none;
+}
