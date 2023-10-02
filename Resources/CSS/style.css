@@ -26,3 +26,62 @@ body {
   max-width: 80rem;
   background-color: yellow;
 }
+
+/* *************************************************************** */
+/* game container */
+.game-container {
+  width: 90%;
+  height: 100%;
+  margin: 0 auto;
+  background-color: red;
+  border-radius: 6%;
+  padding: 2rem;
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  position: relative;
+}
+
+.two-grid-columns {
+  grid-template-columns: 1fr 1fr;
+}
+
+/* *************************************************************** */
+/* Both Player and Computer Section */
+.cont1 {
+  padding: 4rem;
+  padding-left: 4rem;
+
+  /* justify-content: center; */
+}
+.player-section {
+  /* border-top-left-radius: 8%;
+  border-bottom-left-radius: 8%;
+  align-self: center; */
+  background-color: blue;
+}
+.computer-section {
+  /* border-top-right-radius: 8%;
+  border-bottom-right-radius: 8%;
+  align-self: center; */
+  background-color: green;
+}
+
+.game-rule-section {
+  /* grid-column: 1/-1;
+  grid-row: 2/3; */
+  background-color: cadetblue;
+  width: 100%;
+}
+.game-rule {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  width: 95%;
+  margin: 0 auto;
+}
+
+.game-rule-section p {
+  width: 95%;
+  margin: 0.5rem auto;
+}
