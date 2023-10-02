@@ -17,3 +17,12 @@ body {
   color: #fff;
   max-width: 100%;
 }
+
+/* main container */
+.main-container {
+  height: 100vh;
+  line-height: 1.5;
+  margin: 0 auto;
+  max-width: 80rem;
+  background-color: yellow;
+}
