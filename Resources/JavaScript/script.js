@@ -40,6 +40,25 @@ let rule = document.querySelector("#rule");
 
 let gameRuleSection = document.querySelector(".game-rule-section");
 
+/************************************************/
+
+let round = 2;
+let computerScore = 0;
+let userScore = 0;
+
+/************************************************/
+displayRounds(1);
+restart.addEventListener("click", () => {
+  displayRounds(1);
+  computerScore = 0;
+  userScore = 0;
+
+  round = 2;
+  playerScoreMessage.textContent = `PLAYER SCORE: ${userScore}`;
+  compScoreMessage.textContent = `COMPUTER SCORE: ${computerScore}`;
+  winnerMessage.classList.add("hide");
+});
+
 /**********************************************************************/
 let btns = document.querySelectorAll(".btns");
 for (let i = 0; i < btns.length; i++) {
