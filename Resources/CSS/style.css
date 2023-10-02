@@ -3,3 +3,11 @@
   padding: 0;
   box-sizing: border-box;
 }
+
+html {
+  max-width: 100%;
+  /* At defualt 1rem = 16px*/
+  /* 10px / 16px = 62.5%*/
+  /* Percentage of user's browser font-size setting */
+  font-size: 62.5%;
+}
