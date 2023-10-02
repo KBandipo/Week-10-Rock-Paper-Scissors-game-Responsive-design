@@ -124,3 +124,34 @@ body {
 .winner-container {
   /* display: none; */
 }
+
+/* *************************************************************** */
+/* Button section */
+.btns-section {
+  margin: 1rem 0;
+  display: flex;
+  gap: 0.5rem;
+}
+
+.btns {
+  padding: 0.4rem 0.6rem;
+  border: none;
+  border-radius: 7%;
+}
+
+.extra-btn {
+  padding: 0.4rem 0.6rem;
+  border: none;
+  border-radius: 7%;
+  position: absolute;
+  top: 90%;
+}
+.play,
+.restart {
+  left: 10%;
+}
+
+.rule {
+  right: 5%;
+}
+/* *************************************************************** */
