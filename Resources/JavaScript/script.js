@@ -41,6 +41,16 @@ let rule = document.querySelector("#rule");
 let gameRuleSection = document.querySelector(".game-rule-section");
 
 /************************************************/
+play.addEventListener("click", () => {
+  gameRuleSection.classList.add("hide");
+  play.classList.add("hide");
+  restart.classList.remove("hide");
+  rule.classList.remove("hide");
+  gameContainer.classList.add("two-grid-columns");
+  playerSection.classList.remove("hide");
+  computerSection.classList.remove("hide");
+  display.classList.remove("hide");
+});
 
 let round = 2;
 let computerScore = 0;
