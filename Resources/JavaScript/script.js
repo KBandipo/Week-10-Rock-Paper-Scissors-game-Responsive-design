@@ -52,6 +52,33 @@ play.addEventListener("click", () => {
   display.classList.remove("hide");
 });
 
+/************************************************/
+let toggle = 0;
+rule.addEventListener("click", () => {
+  if (toggle >= 1) {
+    toggle = 0;
+  } else {
+    toggle = 1;
+  }
+  if (toggle === 1) {
+    gameRuleSection.classList.remove("hide");
+    restart.classList.add("hide");
+    gameContainer.classList.remove("two-grid-columns");
+    playerSection.classList.add("hide");
+    computerSection.classList.add("hide");
+    display.classList.add("hide");
+    result.classList.add("hide");
+  } else {
+    gameRuleSection.classList.add("hide");
+    restart.classList.remove("hide");
+    gameContainer.classList.add("two-grid-columns");
+    playerSection.classList.remove("hide");
+    computerSection.classList.remove("hide");
+    display.classList.remove("hide");
+    result.classList.remove("hide");
+  }
+});
+
 let round = 2;
 let computerScore = 0;
 let userScore = 0;
