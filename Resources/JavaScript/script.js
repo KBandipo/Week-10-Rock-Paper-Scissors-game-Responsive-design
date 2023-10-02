@@ -2,11 +2,11 @@
 let compMessage = document.querySelector(".compMessage");
 compMessage.classList.add("hide");
 
-/**********************************************************************/
+/***********************************************************************/
+//Game section
 function getComputerChoice() {
   //Create an array of 'gameChopices'
   let gameChoices = ["rock", "paper", "scissors"];
-
   let choice = Math.floor(Math.random() * gameChoices.length);
   if (gameChoices[choice] === "rock") {
     compMessage.textContent = "Computer selects Rock";
@@ -20,8 +20,6 @@ function getComputerChoice() {
   }
   return gameChoices[choice];
 }
-
-/**********************************************************************/
 
 let result = document.querySelector(".result");
 let winnerMessage = document.querySelector(".winner-message");
@@ -40,7 +38,7 @@ let rule = document.querySelector("#rule");
 
 let gameRuleSection = document.querySelector(".game-rule-section");
 
-/************************************************/
+/***********************************************************************/
 play.addEventListener("click", () => {
   gameRuleSection.classList.add("hide");
   play.classList.add("hide");
@@ -52,7 +50,8 @@ play.addEventListener("click", () => {
   display.classList.remove("hide");
 });
 
-/************************************************/
+/***********************************************************************/
+
 let toggle = 0;
 rule.addEventListener("click", () => {
   if (toggle >= 1) {
@@ -79,11 +78,14 @@ rule.addEventListener("click", () => {
   }
 });
 
+/***********************************************************************/
+
 let round = 2;
 let computerScore = 0;
 let userScore = 0;
 
-/************************************************/
+/***********************************************************************/
+
 displayRounds(1);
 restart.addEventListener("click", () => {
   displayRounds(1);
@@ -96,7 +98,7 @@ restart.addEventListener("click", () => {
   winnerMessage.classList.add("hide");
 });
 
-/************************************************/
+/***********************************************************************/
 
 function displayOverallWinnerInfo(round, userScore, computerScore) {
   if (round === 6) {
@@ -116,7 +118,7 @@ function displayOverallWinnerInfo(round, userScore, computerScore) {
   }
 }
 
-/************************************************/
+/***********************************************************************/
 
 function displayRounds(round) {
   let roundText = `${round}`;
@@ -129,7 +131,6 @@ function displayRounds(round) {
 
 const requestChoice = document.querySelector(".request-choice");
 
-/**********************************************************************/
 let btns = document.querySelectorAll(".btns");
 for (let i = 0; i < btns.length; i++) {
   btns[i].addEventListener("click", () => {
