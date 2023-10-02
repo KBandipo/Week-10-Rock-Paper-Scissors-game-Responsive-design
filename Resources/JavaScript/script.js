@@ -59,6 +59,39 @@ restart.addEventListener("click", () => {
   winnerMessage.classList.add("hide");
 });
 
+/************************************************/
+
+function displayOverallWinnerInfo(round, userScore, computerScore) {
+  if (round === 6) {
+    winnerMessage.classList.remove("hide");
+
+    if (userScore > computerScore) {
+      winnerMessage.textContent = `You Win! 🏆`;
+    }
+    if (computerScore > userScore) {
+      winnerMessage.textContent = `You Lose!`;
+    }
+    if (computerScore === userScore) {
+      winnerMessage.textContent = `It's a Draw! Play again.`;
+    }
+
+    play.classList.remove("hide");
+  }
+}
+
+/************************************************/
+
+function displayRounds(round) {
+  let roundText = `${round}`;
+  if (round >= 6) {
+    roundText = "";
+  }
+  roundmessage.textContent = roundText;
+  return round;
+}
+
+const requestChoice = document.querySelector(".request-choice");
+
 /**********************************************************************/
 let btns = document.querySelectorAll(".btns");
 for (let i = 0; i < btns.length; i++) {
