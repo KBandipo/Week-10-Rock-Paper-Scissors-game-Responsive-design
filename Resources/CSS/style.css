@@ -14,7 +14,7 @@ html {
 body {
   font-family: "Inter", sans-serif;
   color: #352020;
-  color: #fff;
+  /* color: #fff; */
   max-width: 100%;
 }
 
@@ -155,7 +155,6 @@ body {
   right: 5%;
 }
 /* *************************************************************** */
-
 /* Element Syling */
 
 .game-heading {
