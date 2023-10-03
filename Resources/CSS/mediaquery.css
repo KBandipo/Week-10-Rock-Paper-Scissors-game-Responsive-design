@@ -1,0 +1,48 @@
+/* *************************************************************** */
+/* General styles */
+/* Above 1155px*/
+
+@media (min-width: 72em) {
+  html {
+    max-width: 100%;
+    font-size: 100%;
+  }
+
+  .player-section,
+  .computer-section {
+    max-width: 100%;
+  }
+
+  .display {
+    position: absolute;
+    top: 15%;
+    left: 50%;
+    transform: translate(-60%, 0%);
+    max-width: 0 auto;
+    padding: 1rem;
+    font-size: 1.3rem;
+  }
+
+  .cont4-result {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, 0%);
+    margin: 0 auto;
+    /* max-width: 100%; */
+  }
+
+  .btns {
+    font-size: 2rem;
+    padding: 0.4rem 0.6rem;
+  }
+
+  .request-choice,
+  .compMessage {
+    font-size: 2rem;
+  }
+  .comp-score,
+  .playerscore {
+    margin-bottom: 0.5rem;
+  }
+}
