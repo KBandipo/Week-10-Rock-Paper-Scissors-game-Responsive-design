@@ -1,42 +1,27 @@
-"use strict";
-let compMessage = document.querySelector(".compMessage");
-compMessage.classList.add("hide");
+// "use strict";
+/***********************************************************************/
+/*********Imported Modules*********/
+import { getComputerChoice, compMessage } from "./getComputerChoice.js";
+import {
+  result,
+  winnerMessage,
+  roundmessage,
+  compScoreMessage,
+  playerScoreMessage,
+  gameContainer,
+  playerSection,
+  computerSection,
+  display,
+  play,
+  restart,
+  rule,
+  gameRuleSection,
+} from "./variablesContainer.js";
+import { displayOverallWinnerInfo } from "./displayOverallWinnerInfo.js";
 
 /***********************************************************************/
-//Game section
-function getComputerChoice() {
-  //Create an array of 'gameChopices'
-  let gameChoices = ["rock", "paper", "scissors"];
-  let choice = Math.floor(Math.random() * gameChoices.length);
-  if (gameChoices[choice] === "rock") {
-    compMessage.textContent = "Computer picks Rock";
-    compMessage.classList.remove("hide");
-  } else if (gameChoices[choice] === "paper") {
-    compMessage.textContent = "Computer picks Paper";
-    compMessage.classList.remove("hide");
-  } else {
-    compMessage.textContent = "Computer picks Scissors";
-    compMessage.classList.remove("hide");
-  }
-  return gameChoices[choice];
-}
 
-let result = document.querySelector(".result");
-let winnerMessage = document.querySelector(".winner-message");
-let roundmessage = document.querySelector(".round-count");
-let compScoreMessage = document.querySelector(".comp-score");
-let playerScoreMessage = document.querySelector(".player-score");
-
-let gameContainer = document.querySelector("#game-container");
-let playerSection = document.querySelector(".player-section");
-let computerSection = document.querySelector(".computer-section");
-let display = document.querySelector(".display");
-
-let play = document.querySelector("#play");
-let restart = document.querySelector("#restart");
-let rule = document.querySelector("#rule");
-
-let gameRuleSection = document.querySelector(".game-rule-section");
+compMessage.classList.add("hide");
 
 /***********************************************************************/
 play.addEventListener("click", () => {
@@ -74,6 +59,9 @@ rule.addEventListener("click", () => {
     playerSection.classList.remove("hide");
     computerSection.classList.remove("hide");
     display.classList.remove("hide");
+    compMessage.classList.add("hide");
+    requestChoice.textContent = "Make a choice";
+
     // result.classList.remove("hide");
   }
 });
@@ -97,27 +85,9 @@ restart.addEventListener("click", () => {
   playerScoreMessage.textContent = `PLAYER SCORE: ${userScore}`;
   compScoreMessage.textContent = `COMPUTER SCORE: ${computerScore}`;
   winnerMessage.classList.add("hide");
+  compMessage.classList.add("hide");
+  requestChoice.textContent = "Make a choice";
 });
-
-/***********************************************************************/
-
-function displayOverallWinnerInfo(round, userScore, computerScore) {
-  if (round === 6) {
-    winnerMessage.classList.remove("hide");
-
-    if (userScore > computerScore) {
-      winnerMessage.textContent = `You Win! 🏆`;
-    }
-    if (computerScore > userScore) {
-      winnerMessage.textContent = `You Lose!`;
-    }
-    if (computerScore === userScore) {
-      winnerMessage.textContent = `It's a Draw! Play again.`;
-    }
-
-    play.classList.remove("hide");
-  }
-}
 
 /***********************************************************************/
 
@@ -164,7 +134,7 @@ for (let i = 0; i < btns.length; i++) {
       (userChoice === "paper" && computerChoice === "rock") ||
       (userChoice === "scissors" && computerChoice === "paper");
     if (computerChoice === userChoice) {
-      result.textContent = "It's a tie for this round! No scores.";
+      result.textContent = "It's a tie! No scores.";
     } else if (computerWins) {
       computerScore += 1;
       compScoreMessage.textContent = `COMPUTER SCORE: ${computerScore}`;
