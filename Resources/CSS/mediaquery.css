@@ -2,7 +2,7 @@
 /* General styles */
 /* Above 1155px*/
 
-@media (min-width: 72em) {
+@media (min-width: 80em) {
   html {
     max-width: 100%;
     font-size: 100%;
@@ -20,30 +20,33 @@
     transform: translate(-60%, 0%);
     max-width: 0 auto;
     padding: 1rem;
-    font-size: 1.3rem;
+    font-size: 1.1rem;
   }
 
   .cont4-result {
     position: absolute;
-    top: 50%;
+    top: 75%;
     left: 50%;
     transform: translate(-50%, 0%);
-    margin: 0 auto;
+    /* margin: 0 auto; */
+    font-size: 1.5rem;
     /* max-width: 100%; */
   }
 
-  .btns {
-    font-size: 2rem;
+  .btns,
+  .btn {
+    font-size: 1.5rem;
     padding: 0.4rem 0.6rem;
   }
-
   .request-choice,
   .compMessage {
-    font-size: 2rem;
+    font-size: 1.5rem;
   }
   .comp-score,
   .playerscore {
+    /* margin: 0 auto; */
     margin-bottom: 0.5rem;
+    font-size: 1.5rem;
   }
 }
 
