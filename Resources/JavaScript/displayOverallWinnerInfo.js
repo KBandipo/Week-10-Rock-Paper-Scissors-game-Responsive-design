@@ -11,7 +11,7 @@ export function displayOverallWinnerInfo(round, userScore, computerScore) {
       winnerMessage.textContent = `You Lose!`;
     }
     if (computerScore === userScore) {
-      winnerMessage.textContent = `It's a Draw!`;
+      winnerMessage.textContent = `It's Draw!`;
     }
 
     play.classList.remove("hide");
