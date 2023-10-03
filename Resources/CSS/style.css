@@ -17,6 +17,7 @@ body {
   color: #fff;
   background-color: #333300;
   max-width: 100%;
+  max-height: 100vh;
 }
 
 /* main container */
@@ -51,29 +52,32 @@ body {
 /* Both Player and Computer Section */
 .cont1 {
   padding: 4rem;
-  padding-left: 4rem;
 
   /* justify-content: center; */
+}
+.container-player-comp {
+  grid-column: 1/-1;
+  display: flex;
+  justify-content: center;
+  margin: 0 auto;
+  max-width: 100%;
 }
 .player-section {
   border-top-left-radius: 50%;
   border-bottom-left-radius: 50%;
-
   background-color: #0000ff;
-  margin-left: auto;
   max-width: 100%;
 }
 .computer-section {
   border-top-right-radius: 50%;
   border-bottom-right-radius: 50%;
-
   background-color: #008000;
-  margin-right: auto;
   max-width: 100%;
 }
 .inner-Container {
   display: flex;
   flex-direction: column;
+  gap: 2rem;
 }
 
 .game-rule-section {
@@ -216,33 +220,26 @@ body {
 }
 
 .comp-title {
+  font-size: 2.3rem;
   margin-left: 0.5rem;
+  margin-bottom: 0.1rem;
 }
 
 .player-score {
   font-size: 1.5rem;
-  margin-bottom: 1rem;
+  /* margin-bottom: 1rem; */
 }
 .request-choice {
   font-size: 1.3rem;
-  margin-bottom: 1rem;
-}
-.player-message {
-  font-size: 1.5rem;
-  margin: 1rem 0;
-  display: none;
 }
 .comp-score {
   font-size: 1.5rem;
-  margin-bottom: 1rem;
+  margin: 0 auto;
 }
-.compChoice {
-  font-size: 1.5rem;
-  margin: 1rem 0;
-}
+
 .compMessage {
-  font-size: 1.5rem;
-  margin: 1rem 0;
+  font-size: 1.3rem;
+  margin: 0 auto;
   /* display: none; */
 }
 .round {
