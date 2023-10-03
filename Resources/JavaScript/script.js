@@ -1,4 +1,4 @@
-// "use strict";
+"use strict";
 /***********************************************************************/
 /*********Imported Modules*********/
 import { getComputerChoice, compMessage } from "./getComputerChoice.js";
