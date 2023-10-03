@@ -1,6 +1,6 @@
 /* *************************************************************** */
 /* General styles */
-/* Above 1155px*/
+/*Point 1 Above 1155px*/
 
 @media (min-width: 80em) {
   html {
@@ -50,6 +50,10 @@
   }
 }
 
+/* *************************************************************** */
+
+/*Point 2 below 1155px*/
+
 @media (max-width: 80em) {
   .player-section,
   .computer-section {
@@ -83,6 +87,10 @@
     margin-bottom: 0.5rem;
   }
 }
+
+/* *************************************************************** */
+
+/*Point 3*/
 
 @media (max-width: 25em) {
   body {
