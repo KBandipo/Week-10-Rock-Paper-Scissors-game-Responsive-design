@@ -9,13 +9,13 @@ function getComputerChoice() {
   let gameChoices = ["rock", "paper", "scissors"];
   let choice = Math.floor(Math.random() * gameChoices.length);
   if (gameChoices[choice] === "rock") {
-    compMessage.textContent = "Computer selects Rock";
+    compMessage.textContent = "Computer picks Rock";
     compMessage.classList.remove("hide");
   } else if (gameChoices[choice] === "paper") {
-    compMessage.textContent = "Computer selects Paper";
+    compMessage.textContent = "Computer picks Paper";
     compMessage.classList.remove("hide");
   } else {
-    compMessage.textContent = "Computer selects Scissors";
+    compMessage.textContent = "Computer picks Scissors";
     compMessage.classList.remove("hide");
   }
   return gameChoices[choice];
@@ -74,7 +74,7 @@ rule.addEventListener("click", () => {
     playerSection.classList.remove("hide");
     computerSection.classList.remove("hide");
     display.classList.remove("hide");
-    result.classList.remove("hide");
+    // result.classList.remove("hide");
   }
 });
 
@@ -88,6 +88,7 @@ let userScore = 0;
 
 displayRounds(1);
 restart.addEventListener("click", () => {
+  result.classList.add("hide");
   displayRounds(1);
   computerScore = 0;
   userScore = 0;
@@ -147,9 +148,13 @@ for (let i = 0; i < btns.length; i++) {
     displayRounds(round);
 
     const userChoice = btns[i].getAttribute("id");
-    requestChoice.textContent = `You pick ${userChoice}`;
-
+    const formattedUserChoice =
+      userChoice.charAt(0).toUpperCase() + userChoice.slice(1);
+    requestChoice.textContent = `You pick ${formattedUserChoice}`;
+    result.classList.remove("hide");
     let computerChoice = getComputerChoice();
+    let formattedComputerChoice =
+      computerChoice.charAt(0).toUpperCase() + computerChoice.slice(1);
     const computerWins =
       (computerChoice === "rock" && userChoice === "scissors") ||
       (computerChoice === "paper" && userChoice === "rock") ||
@@ -163,11 +168,11 @@ for (let i = 0; i < btns.length; i++) {
     } else if (computerWins) {
       computerScore += 1;
       compScoreMessage.textContent = `COMPUTER SCORE: ${computerScore}`;
-      result.textContent = `You Lose! ${computerChoice} beats ${userChoice}`;
+      result.textContent = `You Lose! ${formattedComputerChoice} beats ${formattedUserChoice}`;
     } else if (userWins) {
       userScore += 1;
       playerScoreMessage.textContent = `PLAYER SCORE: ${userScore}`;
-      result.textContent = `You Win! ${userChoice} beats ${computerChoice}`;
+      result.textContent = `You Win! ${formattedUserChoice} beats ${formattedComputerChoice}`;
     }
     displayOverallWinnerInfo(displayRounds(round), userScore, computerScore);
     if (round === 1) {
