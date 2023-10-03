@@ -15,6 +15,7 @@ body {
   font-family: "Inter", sans-serif;
   color: #352020;
   color: #fff;
+  background-color: #333300;
   max-width: 100%;
 }
 
@@ -24,7 +25,8 @@ body {
   line-height: 1.5;
   margin: 0 auto;
   max-width: 80rem;
-  background-color: yellow;
+  background-color: #ffff00;
+  box-shadow: 2rem 2rem 3rem 0 rgba(37, 11, 11, 0.231);
 }
 
 /* *************************************************************** */
@@ -89,7 +91,7 @@ body {
   display: flex;
   flex-direction: column;
   gap: 0.5rem;
-  width: 95%;
+  max-width: 95%;
   margin: 0 auto;
 }
 
@@ -207,7 +209,7 @@ body {
   font-size: 3rem;
 }
 .player-title {
-  font-size: 2.5rem;
+  font-size: 2.3rem;
   text-align: center;
   /* max-width: 70%; */
   margin: 2rem auto;
@@ -253,7 +255,6 @@ body {
   text-align: center;
 }
 .result {
-  /* background-color: pink; */
   padding: 0.1rem 0.3rem;
 }
 
