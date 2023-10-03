@@ -38,6 +38,11 @@
     font-size: 1.5rem;
     padding: 0.4rem 0.6rem;
   }
+  .play {
+    left: 5%;
+    top: 85%;
+  }
+
   .request-choice,
   .compMessage {
     font-size: 1.5rem;
