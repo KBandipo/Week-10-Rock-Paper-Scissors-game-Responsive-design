@@ -120,6 +120,7 @@ body {
   gap: 1rem;
   /* max-width: 0 auto; */
   padding: 1rem;
+  border-radius: 8%;
   box-shadow: 2rem 2rem 3rem 0 rgba(37, 11, 11, 0.231);
 }
 

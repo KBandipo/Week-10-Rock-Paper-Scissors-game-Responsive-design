@@ -15,9 +15,9 @@
 
   .display {
     position: absolute;
-    top: 15%;
+    top: 20%;
     left: 50%;
-    transform: translate(-60%, 0%);
+    transform: translate(-50%, 0%);
     max-width: 0 auto;
     padding: 1rem;
     font-size: 1.1rem;
@@ -50,12 +50,17 @@
   }
 }
 
-@media (max-width: 72em) {
+@media (max-width: 80em) {
+  .player-section,
+  .computer-section {
+    max-width: 100%;
+  }
+
   .display {
     position: absolute;
-    top: 8%;
+    top: 11%;
     left: 50%;
-    transform: translate(-60%, 0%);
+    transform: translate(-50%, 0%);
     max-width: 0 auto;
     padding: 1rem;
     font-size: 1.3rem;
@@ -63,7 +68,7 @@
 
   .cont4-result {
     position: absolute;
-    top: 30%;
+    top: 50%;
     left: 50%;
     transform: translate(-50%, 0%);
     margin: 0 auto;
@@ -85,6 +90,11 @@
     max-height: 100%;
     margin: 0 auto;
   }
+  .player-section,
+  .computer-section {
+    max-width: 100%;
+  }
+
   .game-container {
     width: 90%;
     height: 100%;
