@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="./Resources/CSS/style.css" rel="stylesheet" />
+    <!-- Link @Media query -->
+    <link href="./Resources/CSS/mediaquery.css" rel="stylesheet" />
+    <title>ROCK PAPER AND SCISSORS GAME</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <!-- main container -->
+    <main class="main-container">
+      <div class="game-container" id="game-container">
+        <div class="game-heading-container">
+          <h1 class="game-heading">ROCK PAPER AND SCISSORS GAME</h1>
+        </div>
+        <!-- game rule -->
+        <section class="game-rule-section">
+          <p>Game Rules</p>
+          <ul class="game-rule">
+            <li>Rock beats Scissors, Rock wins</li>
+            <li>Scissors beats Paper, Scissors wins</li>
+            <li>Paper beats Rock, Paper wins</li>
+            <li>
+              If both players choose the same element, it's a tie or a draw, and
+              no one wins
+            </li>
+          </ul>
+        </section>
+
+        <!-- game section -->
+        <!-- player section -->
+        <div class="container-player-comp">
+          <section class="cont1 player-section hide">
+            <div class="inner-container">
+              <h2 class="player-title">PLAYER</h2>
+              <h3 class="player-score">PLAYER SCORE: 0</h3>
+              <p class="request-choice">Make a choice</p>
+              <!-- buttons -->
+              <div class="btns-section">
+                <button class="btns rock" id="rock">Rock</button>
+                <button class="btns paper" id="paper">Paper</button>
+                <button class="btns scissors" id="scissors">Scissors</button>
+              </div>
+            </div>
+          </section>
+          <!-- computer section -->
+          <section class="cont1 computer-section hide">
+            <div class="inner-Container">
+              <h2 class="player-title comp-title">COMPUTER</h2>
+              <h3 class="comp-score">COMPUTER SCORE: 0</h3>
+            </div>
+            <!-- <p class="compChoice">Computer's choice</p> -->
+            <div class="compMessage"></div>
+          </section>
+        </div>
+        <!-- rounds and winner's display -->
+        <section class="display hide">
+          <div class="cont2">
+            <div class="cont3 winner-container">
+              <h3 class="winner">WINNER</h3>
+              <h3 class="winner-message"></h3>
+            </div>
+            <div class="cont3 round-container">
+              <h3 class="round">ROUND</h3>
+              <h3 class="round-count"></h3>
+            </div>
+          </div>
+        </section>
+        <div class="cont4-result"><p class="result hide"></p></div>
+
+        <button class="btn extra-btn play" id="play">Play</button>
+
+        <button class="btn extra-btn restart hide" id="restart">Restart</button>
+
+        <button class="btn extra-btn rule hide" id="rule">Game Rule</button>
+      </div>
+    </main>
+
+    <script type="module" src="./Resources/JavaScript/script.js"></script>
+  </body>
+</html>
